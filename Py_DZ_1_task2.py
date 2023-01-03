@@ -8,14 +8,11 @@ my_list = list(map(int, input('Введите список чисел через
 print(my_list)
 if len(my_list) == 0:
     print('Сумма: NULL, введен пустой список')
-elif len(my_list) == 1:
-    print(my_list[0])
+    
 else:    
-    sum = 0
-    i = 0
-    j = len(my_list)
-    k = int(len(my_list)/2)
-    while i < int(len(my_list) / 2):
+    sum, i = 0, 0
+    j = len(my_list)    
+    while i < int(len(my_list)//2 + len(my_list)%2):
         j -= 1
         sum = my_list[i] * my_list[j]
         i += 1
